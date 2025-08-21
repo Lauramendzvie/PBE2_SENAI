@@ -18,6 +18,9 @@ class Editora(models.Model):
     email = models.EmailField(null=True, blank=True)
     site = models.URLField(null=True, blank=True)
 
+    def __str__(self):
+        return self.editora
+
 class Livro(models.Model):
     titulo = models.CharField(max_length=50)
     subtitulo = models.CharField(max_length=50)
@@ -35,4 +38,5 @@ class Livro(models.Model):
     dimensoes = models.CharField()
     peso = models.DecimalField(max_digits=5, decimal_places=2)
 
-        
+    def __str__(self):
+        return self.titulo  
