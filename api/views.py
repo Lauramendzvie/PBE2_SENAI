@@ -22,6 +22,8 @@ def visu_autor(request):
         else:
             return Response(serializer.data, status = status.HTTP_400_BAD_REQUEST)
         
+##################################################################
+
 class AutoresView(ListCreateAPIView): # ListCreateAPIView é o post
     queryset = Autor.objects.all()
     serializer_class = AutorSerializers
@@ -31,6 +33,8 @@ class AutoresDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Autor.objects.all()
     serializer_class = AutorSerializers
 
+##################################################################
+
 class EditorasView(ListCreateAPIView):
     queryset = Editora.objects.all()
     serializer_class = EditoraSerializers
@@ -39,10 +43,14 @@ class EditorasDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Editora.objects.all()
     serializer_class = EditoraSerializers
 
+##################################################################
+
 class LivrosView(ListCreateAPIView):
     queryset = Livro.objects.all()
     serializer_class = LivroSerializers
  
-class AutoresDetailView(RetrieveUpdateDestroyAPIView):
-    queryset = Autor.objects.all()
-    serializer_class = AutorSerializers
+class LivroDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Livro.objects.all()
+    serializer_class = LivroSerializers
+
+##################################################################
