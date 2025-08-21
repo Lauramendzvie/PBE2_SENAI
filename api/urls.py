@@ -17,6 +17,7 @@ urlpatterns = [
  
 ]
 
+
 # é uma lista que define como as URLs. ela diz ao Django qual função de visualização (view) deve ser executada
 # quando um usuário acessa uma determinada URL.
  
